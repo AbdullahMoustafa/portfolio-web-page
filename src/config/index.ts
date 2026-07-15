@@ -6,7 +6,7 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     "Business Analytics Lead specializing in transforming data into actionable insights through BI, analytics, and AI technologies.",
   lang: "en",
-  siteLogo: "/small-pp.png",
+  siteLogo: "/public/small-pp.png",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
@@ -127,7 +127,7 @@ export const SITE_CONTENT: SiteContent = {
 
       Experienced with cloud and big data platforms including GCP, SAS, Databricks, and Cloudera, I focus on building scalable and efficient data solutions. Beyond technology, I am passionate about process optimization and developing future talent, having delivered 2,500+ hours of AI and data analytics training. I am currently pursuing an M.Sc. in Data Science & AI to further expand my expertise in advanced analytics and intelligent systems.
     `,
-    image: "/abdullahmoustafa.jpg",
+    image: "/public/abdullahmoustafa.jpg",
   },
 };
 
