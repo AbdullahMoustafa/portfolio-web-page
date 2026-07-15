@@ -1,0 +1,60 @@
+---
+import Section from "./Section.astro";
+import type { PostProps } from "@types";
+
+interface Props {
+  posts: PostProps[];
+}
+
+const { posts } = Astro.props;
+---
+
+<Section text="Insights" href="insights">
+  <div class="relative">
+    <div class="relative">
+      <button
+        type="button"
+        class="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/10 bg-black/80 p-3 text-white shadow-lg shadow-black/40 transition hover:bg-white/10"
+        onclick="document.getElementById('posts-scroll').scrollBy({ left: -360, behavior: 'smooth' })"
+        aria-label="Scroll left"
+      >
+        <span class="text-lg">‹</span>
+      </button>
+      <button
+        type="button"
+        class="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/10 bg-black/80 p-3 text-white shadow-lg shadow-black/40 transition hover:bg-white/10"
+        onclick="document.getElementById('posts-scroll').scrollBy({ left: 360, behavior: 'smooth' })"
+        aria-label="Scroll right"
+      >
+        <span class="text-lg">›</span>
+      </button>
+      <div id="posts-scroll" class="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 pt-2 scroll-smooth scrollbar-none sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0" style="-webkit-overflow-scrolling: touch;">
+        {posts.map(({ title, excerpt, image, link, tags, date }) => (
+          <article class="snap-center min-w-[320px] max-w-[360px] shrink-0 overflow-hidden rounded-3xl border border-neutral/20 bg-[#11151f]/80 p-6 transition duration-200 hover:-translate-y-1 hover:border-primary">
+            <div class="mb-5 overflow-hidden rounded-3xl border border-primary/20 bg-slate-900 shadow-2xl shadow-primary/10 transition duration-200 group-hover:shadow-[0_20px_80px_rgba(37,99,235,0.25)]">
+              <img class="h-48 w-full object-cover transition duration-300 group-hover:scale-105" src={image} alt={title} />
+            </div>
+            <div class="mb-6 flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.4em] text-primary">
+              {tags.map((tag) => (
+                <span class="rounded-full border border-primary/20 px-2 py-1">{tag}</span>
+              ))}
+            </div>
+            <h3 class="mb-4 text-2xl font-semibold text-white">{title}</h3>
+            <p class="mb-6 text-neutral">{excerpt}</p>
+            <div class="flex items-center gap-4 text-sm text-white">
+              {link ? (
+                <a href={link} target="_blank" class="font-semibold text-primary hover:underline">
+                  Read more
+                </a>
+              ) : (
+                <span class="font-semibold text-neutral/70">Coming soon</span>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#0e141b]/95 to-transparent"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#0e141b]/95 to-transparent"></div>
+  </div>
+</Section>

@@ -3,7 +3,9 @@ import { SITE_CONTENT } from "@config";
 import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
-import Projects from "@components/Projects.astro";
+import Teaching from "@components/Teaching.astro";
+import Achievements from "@components/Certifications.astro";
+import Posts from "@components/Posts.astro";
 import About from "@components/About.astro";
 
 import "../styles/global.css";
@@ -12,6 +14,8 @@ import "../styles/global.css";
 <Layout>
   <Hero {...SITE_CONTENT.hero} />
   <Experience experience={SITE_CONTENT.experience} />
-  <Projects projects={SITE_CONTENT.projects} />
+  <Teaching teachingExperience={SITE_CONTENT.teachingExperience} />
+  <Achievements achievements={SITE_CONTENT.achievements} />
+  <Posts posts={SITE_CONTENT.posts} />
   <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
 </Layout>
