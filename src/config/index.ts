@@ -183,7 +183,7 @@ export const SITE_CONTENT: SiteContent = {
       excerpt:
         "Episode 3 of Cycls Square explores how BI now anticipates questions, shifts analysts to strategic roles, and blends classical models with modern AI for real business impact.",
       image: "/blogs/blog3.jpg",
-      link: "https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fyoutu.be%2F8ahzWnJgLHU%3Fsi%3DcmZfgRJB5zE_4Gl9&urlhash=heJP&mt=yH5yKZHk3x1B2pOJm8czB8axMie6sls7_Nyq-4Pq-lN9u6B-lPKUo4tYr0Brr0eNuvT95VF8Cf7bmJnNOoNBPnMzAcbkHM_4Ukg6HRKfsyGagsnviG-aLu6SGcP_8925xzVC0jgt5ymPOG68Wu8LytztExdQviNURw&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3BNpWjmXdGTFeDPEaZ3Dit4Q%3D%3D",
+      link: "https://www.youtube.com/watch?v=8ahzWnJgLHU",
       tags: ["AI", "BI", "Video"],
       date: "2026",
     },
