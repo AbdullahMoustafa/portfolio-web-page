@@ -6,7 +6,7 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     "Business Analytics Lead specializing in transforming data into actionable insights through BI, analytics, and AI technologies.",
   lang: "en",
-  siteLogo: "/abdullahmoustafa.jpg",
+  siteLogo: "/small-pp.png",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
@@ -16,7 +16,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "LinkedIn", href: "https://www.linkedin.com/in/abdullah-moustafa" },
     { text: "Github", href: "https://github.com/abdullahmoustafa" },
   ],
-  socialImage: "/zen-og.png",
+  socialImage: "/small-pp.png",
   canonicalURL: "https://abdullahmoustafa.vercel.app/",
 };
 
