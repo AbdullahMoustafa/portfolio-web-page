@@ -154,6 +154,41 @@ export const SITE_CONTENT: SiteContent = {
       image: "/badges/dbt.png",
     },
   ],
+  skills: [
+    {
+      label: "Programming & Data",
+      items: [
+        { title: "Python", image: "/skills/python-logo.png" },
+        { title: "R", image: "/skills/R.png" },
+        { title: "SQL", image: "/skills/SQL.png" },
+        { title: "Excel", image: "/skills/excel.png" },
+      ],
+    },
+    {
+      label: "BI Platforms",
+      items: [
+        { title: "Power BI", image: "/skills/powerbi.png" },
+        { title: "Looker", image: "/skills/looker.png" },
+      ],
+    },
+    {
+      label: "Cloud & Certifications",
+      items: [
+        { title: "Google Cloud", image: "/skills/gcp.png" },
+        { title: "SAS", image: "/skills/sas.png" },
+        { title: "Cloudera", image: "/skills/cloudera.png" },
+        { title: "Databricks", image: "/skills/databricks.svg" },
+      ],
+    },
+    {
+      label: "Tools",
+      items: [
+        { title: "Jira", image: "/skills/jira.webp" },
+        { title: "Git", image: "/skills/github.png" },
+        { title: "Linux", image: "/skills/linux.png" },
+      ],
+    },
+  ],
   projects: [
     {
       name: "Spotifu Music",

@@ -1,36 +1,50 @@
 ---
 import Section from "./Section.astro";
-import type { AchievementProps } from "@types";
+import type { AchievementProps, SkillGroupProps } from "@types";
 
 interface Props {
   achievements: AchievementProps[];
+  skills: SkillGroupProps[];
 }
 
-const { achievements } = Astro.props;
+const { achievements, skills } = Astro.props;
 ---
 
 <Section text="Achievements" href="achievements">
-  <div class="space-y-8">
-    <div class="max-w-2xl space-y-4">
-      <p class="text-base text-neutral">
-        Professional achievements and badges that demonstrate expertise in data analytics and cloud technologies.
-      </p>
-    </div>
-    <div class="flex flex-wrap items-center justify-start gap-4">
-      {
-        achievements.map(({ title, image, link }) => (
-          <div class="flex flex-col items-center gap-3">
-            {link ? (
-              <a href={link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center">
+  <div class="space-y-12">
+    <div class="space-y-8">
+      <div class="max-w-2xl space-y-4">
+        <p class="text-base text-neutral">
+          Professional achievements and badges that demonstrate expertise in data analytics and cloud technologies.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center justify-start gap-4">
+        {
+          achievements.map(({ title, image, link }) => (
+            <div class="flex flex-col items-center gap-3">
+              {link ? (
+                <a href={link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center">
+                  <img class="h-24 w-24 object-contain" src={image} alt={title} />
+                </a>
+              ) : (
                 <img class="h-24 w-24 object-contain" src={image} alt={title} />
-              </a>
-            ) : (
-              <img class="h-24 w-24 object-contain" src={image} alt={title} />
-            )}
-            <span class="text-sm font-semibold text-white">{title}</span>
-          </div>
-        ))
-      }
+              )}
+              <span class="text-sm font-semibold text-white">{title}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <p class="text-base font-semibold text-white">Skillset</p>
+      <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+        {
+          skills.flatMap(({ items }) => items).map(({ title, image }) => (
+            <img class="h-20 w-20 object-contain" src={image} alt={title} />
+          ))
+        }
+      </div>
     </div>
   </div>
 </Section>
