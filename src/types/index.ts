@@ -70,9 +70,15 @@ export interface PostProps {
   date: string;
 }
 
+export interface AboutStat {
+  value: string;
+  label: string;
+}
+
 export interface AboutProps {
   description: string;
   image: string;
+  stats?: AboutStat[];
 }
 
 export interface HeaderProps {

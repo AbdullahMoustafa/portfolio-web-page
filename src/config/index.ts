@@ -72,7 +72,7 @@ export const SITE_CONTENT: SiteContent = {
 ],},
 
 {
-      company: "Vodafone Egypt",
+      company: "Vodafone EG",
       position: "Data Analyst",
       startDate: "November 2022",
       endDate: "April 2023",
@@ -98,7 +98,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   teachingExperience: [
     {
-      company: "MICT - Digital Egypt Pioneers Initiative - DEPI",
+      company: "MCIT - Digital Egypt Pioneers Initiative - DEPI",
       position: "Data Analytics & BI Engineering Session Lead",
       startDate: "Sep 2024",
       endDate: "Present",
@@ -115,6 +115,16 @@ export const SITE_CONTENT: SiteContent = {
       summary: [
         "Lectures, seminars, and training in AI & Data Analytics, equipping students and graduates with practical, industry-ready skills.",
         "Remote part-time teaching role secured through LinkedIn networking and professional visibility.",
+      ],
+    },
+    {
+      company: "GenioTech Co",
+      position: "Tech Instructor & Curriculum Developer",
+      startDate: "August 2018",
+      endDate: "Sept 2020",
+      summary: [
+        "Delivered programming and STEM education instruction.",
+        "Developed Data Science and Software curriculum.",
       ],
     },
   ],
@@ -216,12 +226,12 @@ export const SITE_CONTENT: SiteContent = {
       date: "2026",
     },
     {
-      title: "Agentic Analytics: The Next Evolution in Data-Driven Decision Making",
+      title: "Business Intelligence for Real Business Impact - atomcamp Arabia",
       excerpt:
-        "Agentic analytics turns BI into proactive action by using AI agents to observe outcomes, interpret context, and trigger intelligent responses while keeping human judgment central.",
-      image: "/blogs/blog1.png",
-      link: "https://www.linkedin.com/pulse/agentic-analytics-next-evolution-data-driven-decision-moustafa-lhvnf/",
-      tags: ["AgenticAnalytics", "BI", "AI"],
+        "Join Abdullah Mustafa, Business Analytics Lead at DataScience Middle East, for a practical webinar on aligning BI with business goals, storytelling, and AI-powered analytics.",
+      image: "/blogs/webinar.jpg",
+      link: "https://www.linkedin.com/posts/limited-time-remaining-webinar-goes-live-share-7409200087412822016-jQtC/",
+      tags: ["BI", "Webinar", "Analytics"],
       date: "2026",
     },
     {
@@ -249,10 +259,15 @@ export const SITE_CONTENT: SiteContent = {
       "Cross-industry experience spanning Healthcare, Telecom, Customer Experience, Fintech, and Quality Assurance.",
       "Skilled across the full data analysis lifecycle—from defining business objectives to delivering insights that shape strategic decisions.",
       "Experienced in applying AI and machine learning—including predictive modeling, forecasting, NLP, generative AI, and LLM-based solutions—to solve complex business problems.",
-      "Process optimization and talent development advocate—2,500+ hours of AI and data analytics training delivered.",
       "M.Sc. in Data Science & AI candidate.",
     ].join('\n\n'),
     image: "/AbdullahMoustafa-nobg.png",
+    stats: [
+      { value: "6+ Years", label: "Experience" },
+      { value: "32+", label: "BI Solutions" },
+      { value: "2500+", label: "Training Hours" },
+      { value: "3000+", label: "Students" },
+    ],
   },
 };
 

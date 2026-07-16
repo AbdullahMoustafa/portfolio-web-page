@@ -43,11 +43,15 @@ const { achievements, skills } = Astro.props;
           Core tools and platforms I use across BI, analytics, and cloud workflows.
         </p>
       </div>
-      <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+      <div class="grid grid-cols-3 gap-1 sm:grid-cols-4 md:grid-cols-6">
         {
           skills.flatMap(({ items }) => items).map(({ title, image }) => (
-            <div class="flex h-20 w-20 items-center justify-center">
-              <img class="h-full w-full object-contain" src={image} alt={title} />
+            <div
+              class="flex h-20 w-20 items-center justify-center transition duration-300 ease-out hover:-translate-y-2 hover:scale-105"
+              title={title}
+              aria-label={title}
+            >
+              <img class="h-16 w-16 object-contain transition duration-300 ease-out" src={image} alt={title} />
             </div>
           ))
         }

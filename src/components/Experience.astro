@@ -1,15 +1,30 @@
 ---
 import Section from "./Section.astro";
-import type { ExperienceProps } from "@types";
+import type { AboutStat, ExperienceProps } from "@types";
 
 interface Props {
   experience: ExperienceProps[];
+  stats?: AboutStat[];
 }
 
-const { experience } = Astro.props;
+const { experience, stats } = Astro.props;
 ---
 
 <Section text="Work Experience" href="experience">
+  {stats ? (
+    <div class="mb-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      {
+        stats.map(({ value, label }) => (
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-5 text-center shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:bg-white/10">
+            <p class="text-2xl font-semibold text-white">
+              <span class="stat-value" data-target={Number(String(value).match(/\d+/)?.[0] ?? "0")} data-suffix={String(value).replace(/^\d+/, "")}>0</span>
+            </p>
+            <p class="mt-1 text-xs uppercase tracking-[0.25em] text-neutral">{label}</p>
+          </div>
+        ))
+      }
+    </div>
+  ) : null}
   {
     experience.map(({ company, position, startDate, endDate, summary }) => (
       <div class="mb-10">
@@ -39,3 +54,51 @@ const { experience } = Astro.props;
     ))
   }
 </Section>
+
+<script is:inline>
+  const animateStats = () => {
+    const stats = document.querySelectorAll('.stat-value');
+    stats.forEach((el) => {
+      const target = Number(el.getAttribute('data-target')) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1200;
+      const startTime = performance.now();
+
+      const tick = (now) => {
+        const elapsed = Math.min(now - startTime, duration);
+        const progress = elapsed / duration;
+        const current = Math.round(progress * target);
+        el.textContent = `${current}${suffix}`;
+        if (elapsed < duration) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = `${target}${suffix}`;
+        }
+      };
+
+      el.textContent = `0${suffix}`;
+      requestAnimationFrame(tick);
+    });
+  };
+
+  const bindExperienceNav = () => {
+    const links = document.querySelectorAll('a[href="#experience"]');
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        setTimeout(animateStats, 50);
+      });
+    });
+  };
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('load', () => {
+      animateStats();
+      bindExperienceNav();
+    });
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash === '#experience') {
+        animateStats();
+      }
+    });
+  }
+</script>
