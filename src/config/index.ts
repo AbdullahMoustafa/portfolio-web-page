@@ -143,12 +143,6 @@ export const SITE_CONTENT: SiteContent = {
       link: "https://www.linkedin.com/in/abdullah-moustafa/overlay/1760099226554/single-media-viewer?profileId=ACoAACL8oG8BrMStnx6pzZQcGB84ULgsGx2CwtE",
     },
     {
-      title: "Cloudera",
-      issuer: "Badge",
-      image: "/badges/cloudera.png",
-      link: "https://www.credly.com/badges/86a67431-3e62-4fed-bb21-eb901ef7e9c3",
-    },
-    {
       title: "dbt",
       issuer: "Badge",
       image: "/badges/dbt.png",
@@ -176,8 +170,7 @@ export const SITE_CONTENT: SiteContent = {
       items: [
         { title: "Google Cloud", image: "/skills/gcp.png" },
         { title: "SAS", image: "/skills/sas.png" },
-        { title: "Cloudera", image: "/skills/cloudera.png" },
-        { title: "Databricks", image: "/skills/databricks.svg" },
+        { title: "Databricks", image: "/skills/databricks.png" },
       ],
     },
     {
