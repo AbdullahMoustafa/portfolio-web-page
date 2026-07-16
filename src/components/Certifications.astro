@@ -36,12 +36,19 @@ const { achievements, skills } = Astro.props;
       </div>
     </div>
 
-    <div class="space-y-6">
-      <p class="text-base font-semibold text-white">Skillset</p>
+    <div class="space-y-4">
+      <div>
+        <p class="text-base font-semibold text-white">Skillset</p>
+        <p class="text-sm text-neutral">
+          Core tools and platforms I use across BI, analytics, and cloud workflows.
+        </p>
+      </div>
       <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
         {
           skills.flatMap(({ items }) => items).map(({ title, image }) => (
-            <img class="h-20 w-20 object-contain" src={image} alt={title} />
+            <div class="flex h-20 w-20 items-center justify-center">
+              <img class="h-full w-full object-contain" src={image} alt={title} />
+            </div>
           ))
         }
       </div>
