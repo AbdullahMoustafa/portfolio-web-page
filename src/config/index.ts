@@ -11,7 +11,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Experience", href: "#experience" },
     { text: "Training & Mentorship", href: "#teaching" },
     { text: "Achievements", href: "#achievements" },
-    { text: "Insights", href: "#insights" },
+    { text: "Stories", href: "#stories" },
     { text: "About", href: "#about" },
   ],
   socialLinks: [
@@ -232,6 +232,35 @@ export const SITE_CONTENT: SiteContent = {
       image: "/blogs/webinar.jpg",
       link: "https://www.linkedin.com/posts/limited-time-remaining-webinar-goes-live-share-7409200087412822016-jQtC/",
       tags: ["BI", "Webinar", "Analytics"],
+      date: "2026",
+    },
+    {
+      title: "Data Analytics Hackation by DataScience X ISpark",
+      excerpt:
+        "Two weeks later, the energy from the Digital Lab is still with us. DataScience Middle East brought real datasets, real constraints, and real decision-making pressure to the Abdulla Al Ghurair Foundation Digital Careers Launchpad with iSpark.",
+      image: "/blogs/ispark2.jpg",
+      hoverImage: "/blogs/ispark.jpg",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7431650922914684928/",
+      tags: ["DataAnalytics", "Hackathon", "BI"],
+      date: "2026",
+    },
+    {
+      title: "WHX Dubai 2026: Exploring the Future of Healthcare Through AI and Data",
+      excerpt:
+        "A look at how AI and data are transforming healthcare, from predictive disease detection to personalized care, operational optimization, and better patient outcomes.",
+      image: "/blogs/whx.jpg",
+      hoverImage: ["/blogs/whx2.jpg", "/blogs/whx3.jpg", "/blogs/whx4.jpg"],
+      link: "https://www.linkedin.com/posts/abdullah-moustafa_whxdubai2026-whx-activity-7427396576408485889-pZD5?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACL8oG8BrMStnx6pzZQcGB84ULgsGx2CwtE",
+      tags: ["Healthcare", "AI", "Data"],
+      date: "2026",
+    },
+    {
+      title: "Agentic Analytics: The Next Evolution in Data-Driven Decision Making",
+      excerpt:
+        "Agentic analytics turns BI into proactive action by using AI agents to observe outcomes, interpret context, and trigger intelligent responses while keeping human judgment central.",
+      image: "/blogs/blog1.png",
+      link: "https://www.linkedin.com/pulse/agentic-analytics-next-evolution-data-driven-decision-moustafa-lhvnf/",
+      tags: ["AgenticAnalytics", "BI", "AI"],
       date: "2026",
     },
     {

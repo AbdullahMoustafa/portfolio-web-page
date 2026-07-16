@@ -65,6 +65,7 @@ export interface PostProps {
   title: string;
   excerpt: string;
   image: string;
+  hoverImage?: string | string[];
   link?: string;
   tags: string[];
   date: string;
