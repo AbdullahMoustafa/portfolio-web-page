@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Abdullah Moustafa — Business Intelligence Lead",
   author: "Abdullah Moustafa",
   description:
-    "Business Analytics Lead specializing in transforming data into actionable insights through BI, analytics, and AI technologies.",
+    "BI & Analytics Lead specializing in transforming data into actionable insights through BI, analytics, and AI technologies.",
   lang: "en",
   siteLogo: "/small-pp.png",
   navLinks: [
